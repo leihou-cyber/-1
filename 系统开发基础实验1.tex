@@ -1,0 +1,69 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[UTF8]{ctex}
+\usepackage{color}
+\begin{document}
+	\title{\color{red}{\huge 实验报告}}
+	\author{\color{blue}{\large 周雍凡}}
+	\date{\today}
+	\maketitle
+	
+	\pagenumbering{roman}
+	\tableofcontents
+	\newpage
+	
+	
+	\section{git init}
+	
+	{\color{blue} 命令格式:git init}
+	\paragraph{初始化一个Git仓库，执行完git init命令后，会生成一个.git目录，该目录包含了资源数据，且只会在仓库的根目录生成。}
+	\section{git clone}
+
+	{\color{blue} 命令格式:git clone <url> [directory]}
+	\paragraph{clone命令可以从Git仓库拷贝项目,
+	如git clone git://github.com/schacon/grit.git}
+	
+	\section{git add}
+	{\color{blue} 命令格式:git add}
+	将文件添加到缓存，如新项目中
+	
+	\section{git commit}
+	{\color{blue} 命令格式:git commit -m "第一次版本提交"}
+	将缓存区内容添加到仓库中，可以在后面加-m选项，以在命令行中提供提交注释
+
+
+	\section{git mv}
+	{\color{blue} 命令格式:git mv test.txt newtest.txt}
+	用于移动或重命名一个文件、目录、软连接，如要将一个test.txt文件重命名为newtest.txt
+	
+	\section{git branch}
+	{\color{blue} 命令格式:git branch/git branch branchname}
+	可以查看分支，也可以创建分支，如果没有参数时，git branch会列出你在本地的分支；如果有参数时，git branch就会创建改参数的分支
+	
+	\section{git checkout}
+	{\color{blue} 命令格式:git checkout branchname}
+	切换分支,git checkout test
+	
+	\section{git merge}
+	{\color{blue} 命令格式:git merge branchname}
+	将任意分支合并到到当前分支中去,git merge test
+	
+	\section{git branch}
+	{\color{blue} 命令格式:git branch -d (branchname)}
+	删除分支,git branch -d test
+		
+	\section{git remote add}
+	{\color{blue} 命令格式:git remote add [alias] [url]}
+	添加一个远程仓库,参数[alias]为别名， [url]为远程仓库的地址
+	git remote add test https://github.com/test.git
+			
+	\section{git pull}
+	{\color{blue} 命令格式:git pull [options] [<repository> [<refspec>…]]}
+	相当于是从远程获取最新版本并merge到本地	
+	如:git pull test master --allow-unrelated-histories(本地与远程独立时)
+			
+	\section{git push}
+	{\color{blue} 命令格式:git push [alias] [branch]}
+	推送你的新分支与数据到某个远端仓库命令
+	如：git push test master
+	
+\end{document}
