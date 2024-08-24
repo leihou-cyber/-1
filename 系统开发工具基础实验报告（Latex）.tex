@@ -1,0 +1,97 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[UTF8]{ctex}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{verbatim}
+
+\begin{document}
+	
+	\title{\color{red}{\huge 实验报告（Latex）}}
+	\author{\color{blue}{\large 周雍凡}}
+	\date{\today}
+	\maketitle
+	
+	\begin{enumerate}
+		\item \begin{verbatim}
+			\documentclass[a4paper, 12pt]{article}\end{verbatim}
+		\begin{itemize}
+			\item documentclass 命令必须出现在每个 LaTeX 文档的开头
+			\item article 文档类型适合较短的文章
+			\item report 更长的多章节的文档
+			\item 示例中它设置纸张大小为 A4，主要文字大小为 12pt
+		\end{itemize}
+		
+		\item \begin{verbatim}
+			\begin{document} 和 \end{document}\end{verbatim}
+		\begin{itemize}
+			\item 将文本内容包裹起来
+		\end{itemize}
+		
+		\item \begin{verbatim}
+			\title{My First Document}
+			\author{My Name}
+			\date{\today}
+			\maketitle\end{verbatim}
+			\begin{itemize}
+				\item 文章标题、作者、日期
+				\item maketitle:执行上述标题代码
+			\end{itemize}
+			
+		
+		\item \begin{verbatim}
+			\section{...}
+			\subsection{...}
+			\subsubsection{...}\end{verbatim}
+			\begin{itemize}
+				\item 章、节、小节...
+			\end{itemize}
+			
+		\item \begin{verbatim}
+			\paragraph{...}
+			\subparagraph{...}\end{verbatim}
+		\begin{itemize}
+			\item 段落、小段落
+		\end{itemize}
+		\item \begin{verbatim}
+			\tableofcontents\end{verbatim}
+		\begin{itemize}
+			\item 生成目录
+		\end{itemize}
+		\item \begin{verbatim}
+			\pagenumbering{roman}
+			\pagenumbering{arabic}\end{verbatim}
+		\begin{itemize}
+			\item 更改页码为罗马数字、阿拉伯数字
+		\end{itemize}
+		\item \begin{verbatim}\newpage\end{verbatim}
+		\begin{itemize}
+			\item 生成新的一页
+		\end{itemize}
+		\item \begin{verbatim}
+			\usepackage[UTF8]{ctex}\end{verbatim}
+		\begin{itemize}
+			\item 使用CTeX宏包、LaTeX的中文字体支持
+		\end{itemize}
+		\item \begin{verbatim}
+			{\color{colorname}text}\end{verbatim}
+		\begin{itemize}
+			\item 为字体添加颜色
+			\item 使用前需要导入包,usepackage{color}
+		\end{itemize}
+		\item \begin{verbatim}
+			\begin{enumerate}\end{enumerate}
+			\begin{itemize}\end{itemize}\end{verbatim}
+		\begin{itemize}
+			\item 有序列表（enumerate）和无序列表（itemize）
+		\end{itemize}
+		\item \begin{verbatim}
+			\tableofcontents\end{verbatim}
+		\begin{itemize}
+			\item 特殊字符
+			\begin{verbatim}
+				# $ % ^ & _ { } ~ \ \end{verbatim}
+			\item 使用前需加上 / 进行转义
+		\end{itemize}
+	\end{enumerate}
+	
+\end{document}
