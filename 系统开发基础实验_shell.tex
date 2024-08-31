@@ -1,0 +1,211 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[UTF8]{ctex}
+\usepackage{color}
+\usepackage{graphicx}
+
+\begin{document}
+	\title{\color{red}{\huge 实验报告}}
+	\author{\color{blue}{\large 周雍凡}}
+	\date{\today}
+	\maketitle
+	
+	\pagenumbering{roman}
+	\tableofcontents
+	\newpage
+	
+	\pagenumbering{arabic}
+	\setcounter{page}{1}
+	
+	\section{pwd}
+	{\color{blue} 命令格式:pwd}
+	\paragraph{获取当前工作目录}
+        
+	\section{cd}
+	{\color{blue} 命令格式:cd /home}
+	\paragraph{切换目录}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=1.0\linewidth]{Snipaste_2024-08-31_16-00-31.png}
+        \caption{cd 示例}
+        \label{fig:cd示例}
+    \end{figure}
+	
+	\section{mkdir}
+	{\color{blue} 命令格式:mkdir missing}
+	\paragraph{创建文件夹}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=1.0\linewidth]{Snipaste_2024-08-31_15-55-31.png}
+        \caption{mkdir 示例}
+        \label{fig:mkdir示例}
+    \end{figure}
+	
+	\section{touch}
+	{\color{blue} 命令格式:touch test.txt}
+	\paragraph{创建文件}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=1.0\linewidth]{Snipaste_2024-08-31_16-00-45.png}
+        \caption{touch 示例}
+        \label{fig:touch示例}
+    \end{figure}
+
+	\section{--help/man}
+	{\color{blue} 命令格式:touch --help/man touch}
+	\paragraph{获取帮助手册}
+	
+	\section{echo >}
+	{\color{blue} 命令格式:echo hello > hello.txt}
+	\paragraph{> 输入流，将信息输入文件}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=1.0\linewidth]{Snipaste_2024-08-31_16-04-47.png}
+        \caption{> 示例}
+        \label{fig:>示例}
+    \end{figure}
+	
+	\section{cat <}
+	{\color{blue} 命令格式:cat < hello.txt}
+    \paragraph{< 输出流，通过 cat 将文件中信息输出}	
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=1.0\linewidth]{Snipaste_2024-08-31_16-06-18.png}
+        \caption{< 示例}
+        \label{fig:<示例}
+    \end{figure}
+
+	\section{>>}
+	{\color{blue} 命令格式:echo hello >> hello.txt}
+	\paragraph{追加内容}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=1.0\linewidth]{Snipaste_2024-08-31_16-05-00.png}
+        \caption{>> 示例}
+        \label{fig:>>示例}
+    \end{figure}
+	
+	\section{| }
+	{\color{blue} 命令格式:ls -l / | tail -n1}
+	\paragraph{管道，更好的利用文件重定向。| 操作符允许我们将一个程序的输出和另外一个程序的输入连接起来}
+		
+	\section{“ ”}
+	{\color{blue} 命令格式:echo "test"}
+	\paragraph{引用，双引号包围的内容可以允许变量扩展，也允许转义字符的存在}
+	
+	\section{’‘}
+	{\color{blue} 命令格式:echo ''}
+	\paragraph{将引号内内容原封不动显示}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=1.0\linewidth]{Snipaste_2024-08-31_16-09-51.png}
+        \caption{'' 示例}
+        \label{fig:''示例}
+    \end{figure}
+
+	\section{ls}
+	{\color{blue} 命令格式:ls -l}
+	\paragraph{命令用于显示指定工作目录下之内容（列出目前工作目录所含的文件及子目录)}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=1.0\linewidth]{Snipaste_2024-08-31_16-12-36.png}
+        \caption{ls 示例}
+        \label{fig:ls示例}
+    \end{figure}
+
+    \section{使用 | 和 > ，将 semester 文件输出的最后更改日期信息，写入文件中}
+    \paragraph{./semester | grep last-modified > ~/last-modified.txt}
+
+    \section{Powercfg -energy}
+    \paragraph{生成电池的使用情况报告}
+
+    \section{ls -a\\
+    ls -h\\
+    ls -t\\
+    ls --color=auto}
+    \paragraph{-a: 所有文件（包括隐藏文件）\\
+    -h: 文件打印以人类可以理解的格式输出\\
+    -t: 文件以最近访问顺序排序\\
+    --color=auto: 以彩色文本显示输出结果}
+    \newpage
+    
+    \section{marco,polo 执行操作}
+    \paragraph{vim marco.sh}
+    \paragraph{用 vim 编辑器创建 .sh 文件用于初始化函数}
+    \paragraph{source marco.sh}
+    \paragraph{加载 marco.sh 文件}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=1.0\linewidth]{Snipaste_2024-08-31_16-43-55.png}
+        \caption{创建到加载}
+        \label{fig:创建到加载}
+    \end{figure}
+
+    \paragraph{编写两个函数}
+    \begin{verbatim}
+marco(){
+     echo "$(pwd)" > $HOME/marco_history.log
+     echo "save pwd $(pwd)"
+ }
+ polo(){
+     cd "$(cat "$HOME/marco_history.log")"
+ }
+    \end{verbatim}
+
+    \paragraph{执行函数 marco 与 polo}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=1.0\linewidth]{Snipaste_2024-08-31_16-44-15.png}
+        \caption{执行 marco}
+        \label{fig:执行marco}
+    \end{figure}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=1.0\linewidth]{Snipaste_2024-08-31_16-44-34.png}
+        \caption{执行 polo}
+        \label{fig:执行polo}
+    \end{figure}
+    \paragraph{可以看到执行完 polo 后所在文件夹位置发生了变化}
+    \newpage
+
+    \section{函数的debug}
+    \paragraph{test.sh和debug_for.sh函数}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.75\linewidth]{Snipaste_2024-08-31_16-54-20.png}
+        \caption{test.sh 函数}
+        \label{fig:test.sh}
+    \end{figure}
+    \begin{figure}
+        \centering
+        \includegraphics[width=1\linewidth]{Snipaste_2024-08-31_16-56-09.png}
+        \caption{debug_for.sh函数}
+        \label{fig:enter-label}
+    \end{figure}
+    
+    
+    
+    \paragraph{循环直到出现错误}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.75\linewidth]{Snipaste_2024-08-31_16-57-43.png}
+        \caption{执行过程}
+        \label{fig:执行过程}
+    \end{figure}
+
+    \section{find 指令}
+    \paragraph{首先创建文件以及文件夹}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.75\linewidth]{Snipaste_2024-08-31_16-59-08.png}
+        \caption{创建文件目录}
+        \label{fig:创建文件目录}
+    \end{figure}
+    \paragraph{使用 find 指令将当前文件夹及其子文件夹中带有 .html 后缀的文件压缩至名为 html 的 zip 压缩包中}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=1.0\linewidth]{Snipaste_2024-08-31_16-59-32.png}
+        \caption{执行过程}
+        \label{fig:执行过程}
+    \end{figure}
+    
+\end{document}
